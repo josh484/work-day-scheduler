@@ -8,18 +8,18 @@ $(function(){
     var tableTime = [9,10,11,12,13,14,15,16,19];
     var startofHour = dayjs().startOf('hour');
 
-    function getLocal() {
-        
-    }
-    
+
     for (var i = 0; i < tableTime.length; i++){
+        var dataContent = localStorage.getItem(tableTime[i].toString());
+
+
         var createNewTable = $("<tr></tr>");
         var tableTimeGetter = $('<td></td>');
         var tableContent = $('<td></td>');
-        var inputContent = $('<input></input>');
+        var inputContent = $('<input>'+ dataContent +'</input>');
         var tableSaver = $('<td></td>');
         var button = $('<button type="button" class="btn btn-dark">Dark</button>')
-
+        
 
         tableTimeGetter.text(tableTime[i]);
         tableContent.append(inputContent)
@@ -30,6 +30,9 @@ $(function(){
         createNewTable.append(tableSaver);
         button.attr('data-submit', + tableTime[i]);
         inputContent.attr('data-content', + tableTime[i])
+
+        
+
         
         if(tableTime[i] > startofHour.format('HH')) {
             tableContent.attr('id', 'future');

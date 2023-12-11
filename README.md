@@ -1,6 +1,6 @@
 # work-day-scheduler
 Setting reminders for yourself for each working hour of the day.
-Link to Webpage: https://josh484.github.io/multiple-choice-quiz/
+Link to Webpage: https://josh484.github.io/work-day-scheduler/
 ## Description 
 This project uses what I have learnt over the last 2 weeks which includes DOM traversal and modifying HTML elements from the previous week and using 3rd Party APIs such as Jquery which simplifies javascript further and displayJS in order to get the time. 
 All of this is shown as a work day scheduler.

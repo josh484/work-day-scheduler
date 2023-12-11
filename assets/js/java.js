@@ -16,12 +16,12 @@ $(function(){
         var createNewTable = $("<tr></tr>");
         var tableTimeGetter = $('<td></td>');
         var tableContent = $('<td></td>');
-        var inputContent = $('<input></input>');
+        var inputContent = $('<textarea></textarea>');
         var tableSaver = $('<td></td>');
-        var button = $('<button type="button" class="btn btn-dark">Dark</button>')
+        var button = $('<button type="button" class="btn btn-primary saveBtn">Save</button>')
         
         if (dataContent){
-            inputContent.attr('value', dataContent);
+            inputContent.text(dataContent);
         }
 
         tableTimeGetter.text(tableTime[i]);

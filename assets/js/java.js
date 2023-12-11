@@ -1,3 +1,4 @@
+/*  */
 $(function(){
     var textCDay = $("#currentDay");
 
@@ -5,7 +6,7 @@ $(function(){
     var getDay = dayjs();
     textCDay.text(getDay.format("dddd, MMMM  Do"));
 
-    var tableTime = [9,10,11,12,13,14,15,16,19];
+    var tableTime = [9,10,11,12,13,14,15,16,17];
     var startofHour = dayjs().startOf('hour');
 
 
@@ -24,7 +25,12 @@ $(function(){
             inputContent.text(dataContent);
         }
 
-        tableTimeGetter.text(tableTime[i]);
+        if (tableTime[i] >= 12){
+            tableTimeGetter.text(tableTime[i] + " pm");
+        } else{
+            tableTimeGetter.text(tableTime[i] + " am");
+        }
+        
         
         tableContent.append(inputContent)
         tableSaver.append(button);
@@ -51,6 +57,8 @@ $(function(){
         
         
     }
+
+
     $('#putContent').delegate('.btn','click', function(event){
         event.preventDefault();
         var clickedItem = $(event.target);

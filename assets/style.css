@@ -47,6 +47,8 @@ header {
 .saveBtn {
   background-color: #6200EE;
   color: white;
+  height: 75%;
+  width: 75%;
 }
 
 .btn-primary {
@@ -80,13 +82,21 @@ td {
   color: white;
   padding: 0;
   margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  height: 100px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 textarea {
   background: transparent;
   border: none;
   width: 100%;
-
+  height: 100%;
+  color: white;
+  
 }
 
 textarea:focus {
